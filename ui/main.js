@@ -78,6 +78,8 @@ var elem = document.querySelectorAll(".num");
       if(screen.innerHTML === output) {
           
         screen.innerHTML = eval(output);
+        var msg = new SpeechSynthesisUtterance(output);
+                window.speechSynthesis.speak(msg);
       }
         
       else {
@@ -106,6 +108,8 @@ var elem = document.querySelectorAll(".num");
          if(screen.innerHTML === "") {
             
             screen.innerHTML = screen.innerHTML.concat("");
+            var msg = new SpeechSynthesisUtterance(output);
+                window.speechSynthesis.speak(msg);
             
         }
         
