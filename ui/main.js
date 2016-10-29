@@ -7,6 +7,9 @@ var current,
     zero,
     period,
     operator;
+                var msg = new SpeechSynthesisUtterance("Disco Calculator");
+                window.speechSynthesis.speak(msg);
+
    
     screen = document.getElementById("result");
 
@@ -110,7 +113,7 @@ var elem = document.querySelectorAll(".num");
         
             screen.innerHTML = output.concat(operator);
             var msg = new SpeechSynthesisUtterance(output);
-   window.speechSynthesis.speak(output);
+                window.speechSynthesis.speak(msg);
             
         }
            
