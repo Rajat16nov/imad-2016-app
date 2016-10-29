@@ -12,37 +12,47 @@
             SMART CALCULATOR
         </div>
 <br/>
-<form Name="calc">
-<table border=2>
-<tr>
-<td colspan=4><input type=text Name="display"></td>
-</tr>
-<tr>
-<td><input type=button value="0" OnClick="calc.display.value+='0'"></td>
-<td><input type=button value="1" OnClick="calc.display.value+='1'"></td>
-<td><input type=button value="2" OnClick="calc.display.value+='2'"></td>
-<td><input type=button value="+" OnClick="calc.display.value+='+'"></td>
-</tr>
-<tr>
-<td><input type=button value="3" OnClick="calc.display.value+='3'"></td>
-<td><input type=button value="4" OnClick="calc.display.value+='4'"></td>
-<td><input type=button value="5" OnClick="calc.display.value+='5'"></td>
-<td><input type=button value="-" OnClick="calc.display.value+='-'"></td>
-</tr>
-<tr>
-<td><input type=button value="6" OnClick="calc.display.value+='6'"></td>
-<td><input type=button value="7" OnClick="calc.display.value+='7'"></td>
-<td><input type=button value="8" OnClick="calc.display.value+='8'"></td>
-<td><input type=button value="x" OnClick="calc.display.value+='*'"></td>
-</tr>
-<tr>
-<td><input type=button value="9" OnClick="calc.display.value+='9'"></td>
-<td><input type=button value="C" OnClick="calc.display.value=''"></td>
-<td><input type=button value="=" OnClick="calc.display.value=eval(calc.display.value)"></td>
-<td><input type=button value="/" OnClick="calc.display.value+='/'"></td>
-</tr>
-</table>
-</form>
+<div id="background"><!-- Main background -->
+             
+        <div id="result"></div>
+             
+         <div id="main">
+             <div id="first-rows">
+              <button class="del-bg" id="delete">Del</button>
+                 <button value="%" class="btn-style operator opera-bg fall-back">%</button>
+                 <button value="+" class="btn-style opera-bg value align operator">+</button>
+                 </div>
+                 
+               <div class="rows">
+             <button value="7" class="btn-style num-bg num first-child">7</button>
+                 <button value="8" class="btn-style num-bg num">8</button>
+                 <button value="9" class="btn-style num-bg num">9</button>
+                 <button value="-" class="btn-style opera-bg operator">-</button>
+                 </div>
+                 
+                 <div class="rows">
+                 <button value="4" class="btn-style num-bg num first-child">4</button>
+                 <button value="5" class="btn-style num-bg num">5</button>
+                 <button value="6" class="btn-style num-bg num">6</button>
+                 <button value="*" class="btn-style opera-bg operator">x</button>
+                 </div>
+                 
+                 <div class="rows">
+                 <button value="1" class="btn-style num-bg num first-child">1</button>
+                 <button value="2" class="btn-style num-bg num">2</button>
+                 <button value="3" class="btn-style num-bg num">3</button>
+                 <button value="/" class="btn-style opera-bg operator">/</button>
+                 </div>
+                 
+                 <div class="rows">
+                 <button value="0" class="num-bg zero" id="delete">0</button>
+                 <button value="." class="btn-style num-bg period fall-back">.</button>
+                 <button value="=" id="eqn-bg" class="eqn align">=</button>
+                 </div>
+                
+             </div>
+         
+         </div>
         <script type="text/javascript" src="/ui/main.js">
         </script>
     </body>
