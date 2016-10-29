@@ -1,4 +1,3 @@
-console.log('Loaded!');
 window.onload = function() {
 
 var current,
