@@ -43,13 +43,16 @@ var elem = document.querySelectorAll(".num");
         
         if(screen.innerHTML === "") {
             
-           output = screen.innerHTML = zero;  
+           output = screen.innerHTML = zero;
+           var msg = new SpeechSynthesisUtterance(output);
+                window.speechSynthesis.speak(msg);
         }
         
         else if(screen.innerHTML === output) {
             
          output = screen.innerHTML +=zero;
-            
+            var msg = new SpeechSynthesisUtterance(output);
+                window.speechSynthesis.speak(msg);
         }
           
     },false);
@@ -61,12 +64,16 @@ var elem = document.querySelectorAll(".num");
         if(screen.innerHTML === "") {
             
          output = screen.innerHTML = screen.innerHTML.concat("0.");
+         var msg = new SpeechSynthesisUtterance(output);
+                window.speechSynthesis.speak(msg);
             
          }
     
         else if(screen.innerHTML === output) {
         
           screen.innerHTML = screen.innerHTML.concat(".");
+          var msg = new SpeechSynthesisUtterance(output);
+                window.speechSynthesis.speak(msg);
             
         }
         
@@ -78,6 +85,8 @@ var elem = document.querySelectorAll(".num");
       if(screen.innerHTML === output) {
           
         screen.innerHTML = eval(output);
+        var msg = new SpeechSynthesisUtterance(output);
+                window.speechSynthesis.speak(msg);
         
       }
         
@@ -109,14 +118,16 @@ var elem = document.querySelectorAll(".num");
          if(screen.innerHTML === "") {
             
             screen.innerHTML = screen.innerHTML.concat("");
-            
+            var msg = new SpeechSynthesisUtterance(output);
+                window.speechSynthesis.speak(msg);
             
         }
         
         else if(output) {
         
             screen.innerHTML = output.concat(operator);
-            
+            var msg = new SpeechSynthesisUtterance(output);
+                window.speechSynthesis.speak(msg);
             
         }
            
