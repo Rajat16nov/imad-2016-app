@@ -7,8 +7,7 @@ var current,
     zero,
     period,
     operator;
-   var msg = new SpeechSynthesisUtterance('Hello World');
-   window.speechSynthesis.speak(msg);
+   
     screen = document.getElementById("result");
 
 var elem = document.querySelectorAll(".num");
@@ -110,6 +109,8 @@ var elem = document.querySelectorAll(".num");
         else if(output) {
         
             screen.innerHTML = output.concat(operator);
+            var msg = new SpeechSynthesisUtterance(output);
+   window.speechSynthesis.speak(output);
             
         }
            
