@@ -7,7 +7,7 @@ var current,
     zero,
     period,
     operator;
-                var msg = new SpeechSynthesisUtterance("Disco Calculator");
+                var msg = new SpeechSynthesisUtterance("Welcome To Disco Calculator");
                 window.speechSynthesis.speak(msg);
 
    
