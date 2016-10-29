@@ -78,8 +78,7 @@ var elem = document.querySelectorAll(".num");
       if(screen.innerHTML === output) {
           
         screen.innerHTML = eval(output);
-        var msg = new SpeechSynthesisUtterance(output);
-                window.speechSynthesis.speak(msg);
+        
       }
         
       else {
@@ -104,20 +103,20 @@ var elem = document.querySelectorAll(".num");
         elem1[i].addEventListener("click",function() {
          
         operator = this.value;
+        var msg = new SpeechSynthesisUtterance(operator);
+                window.speechSynthesis.speak(msg);
          
          if(screen.innerHTML === "") {
             
             screen.innerHTML = screen.innerHTML.concat("");
-            var msg = new SpeechSynthesisUtterance(output);
-                window.speechSynthesis.speak(msg);
+            
             
         }
         
         else if(output) {
         
             screen.innerHTML = output.concat(operator);
-            var msg = new SpeechSynthesisUtterance(output);
-                window.speechSynthesis.speak(msg);
+            
             
         }
            
