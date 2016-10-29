@@ -28,7 +28,8 @@ var elem = document.querySelectorAll(".num");
             limit = output.length;
          
          if(limit > 16 ) {
-        
+        var msg = new SpeechSynthesisUtterance("Sorry no more input is allowed");
+                window.speechSynthesis.speak(msg);
          alert("Sorry no more input is allowed");
              
        }
@@ -43,16 +44,13 @@ var elem = document.querySelectorAll(".num");
         
         if(screen.innerHTML === "") {
             
-           output = screen.innerHTML = zero;
-           var msg = new SpeechSynthesisUtterance(output);
-                window.speechSynthesis.speak(msg);
+           output = screen.innerHTML = zero;  
         }
         
         else if(screen.innerHTML === output) {
             
          output = screen.innerHTML +=zero;
-            var msg = new SpeechSynthesisUtterance(output);
-                window.speechSynthesis.speak(msg);
+            
         }
           
     },false);
@@ -64,16 +62,12 @@ var elem = document.querySelectorAll(".num");
         if(screen.innerHTML === "") {
             
          output = screen.innerHTML = screen.innerHTML.concat("0.");
-         var msg = new SpeechSynthesisUtterance(output);
-                window.speechSynthesis.speak(msg);
             
          }
     
         else if(screen.innerHTML === output) {
         
           screen.innerHTML = screen.innerHTML.concat(".");
-          var msg = new SpeechSynthesisUtterance(output);
-                window.speechSynthesis.speak(msg);
             
         }
         
@@ -85,8 +79,7 @@ var elem = document.querySelectorAll(".num");
       if(screen.innerHTML === output) {
           
         screen.innerHTML = eval(output);
-        var msg = new SpeechSynthesisUtterance(output);
-                window.speechSynthesis.speak(msg);
+
         
       }
         
@@ -118,16 +111,14 @@ var elem = document.querySelectorAll(".num");
          if(screen.innerHTML === "") {
             
             screen.innerHTML = screen.innerHTML.concat("");
-            var msg = new SpeechSynthesisUtterance(output);
-                window.speechSynthesis.speak(msg);
+            
             
         }
         
         else if(output) {
         
             screen.innerHTML = output.concat(operator);
-            var msg = new SpeechSynthesisUtterance(output);
-                window.speechSynthesis.speak(msg);
+            
             
         }
            
