@@ -54,62 +54,50 @@
              </div>
          
          </div>
-         <section>
-	<input type="radio" name="controls" id="start">
-	<input type="radio" name="controls" id="stop">
-	<input type="radio" name="controls" id="reset">
-	<div class="stopwatch">
+         <div class="container">
+	<!-- time to add the controls -->
+	<input id="start" name="controls" type="radio" />
+	<input id="stop" name="controls" type="radio" />
+	<input id="reset" name="controls" type="radio" />
+	<div class="timer">
 		<div class="cell">
-			<span class="num ten ten_hour">0 1 2 3 4 5 6 7 8 9</span>
+			<div class="numbers tenhour moveten">0 1 2 3 4 5 6 7 8 9</div>
 		</div>
 		<div class="cell">
-			<span class="num ten hour">0 1 2 3 4 5 6 7 8 9</span>
+			<div class="numbers hour moveten">0 1 2 3 4 5 6 7 8 9</div>
+		</div>
+		<div class="cell divider"><div class="numbers">:</div></div>
+		<div class="cell">
+			<div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
 		</div>
 		<div class="cell">
-			<span class="num">:</span>
+			<div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
+		</div>
+		<div class="cell divider"><div class="numbers">:</div></div>
+		<div class="cell">
+			<div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
 		</div>
 		<div class="cell">
-			<span class="num sex ten_minu">0 1 2 3 4 5</span>
+			<div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
+		</div>
+		<div class="cell divider"><div class="numbers">:</div></div>
+		<div class="cell">
+			<div class="numbers milisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
 		</div>
 		<div class="cell">
-			<span class="num ten minu">0 1 2 3 4 5 6 7 8 9</span>
+			<div class="numbers tenmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
 		</div>
 		<div class="cell">
-			<span class="num">:</span>
-		</div>
-		<div class="cell">
-			<span class="num sex ten_sec">0 1 2 3 4 5</span>
-		</div>
-		<div class="cell">
-			<span class="num ten sec">0 1 2 3 4 5 6 7 8 9</span>
-		</div>
-		<div class="cell">
-			<span class="num">:</span>
-		</div>
-		<div class="cell">
-			<span class="num ten hund_mill">0 1 2 3 4 5 6 7 8 9</span>
-		</div>
-		<div class="cell">
-			<span class="num ten ten_mill">0 1 2 3 4 5 6 7 8 9</span>
-		</div>
-		<div class="cell">
-			<span class="num ten mill">0 1 2 3 4 5 6 7 8 9</span>
+			<div class="numbers hundredmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
 		</div>
 	</div>
-	<div class="control">
+	<!-- Lables for the controls -->
+	<div id="timer_controls">
 		<label for="start">Start</label>
 		<label for="stop">Stop</label>
 		<label for="reset">Reset</label>
 	</div>
-</section>
- 
-	<script src='style.js'></script>
- 
-	<script>
-		if (document.location.search.match(/type=embed/gi)) {
-		  window.parent.postMessage('resize', "*");
-		}
-	</script>
+</div>
         <script type="text/javascript" src="/ui/main.js">
         </script>
     </body>
