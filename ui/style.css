@@ -289,7 +289,10 @@ button {
 .center {
     text-align: center;
 }
-
+.text-normal
+{
+    font-size:100%;
+}
 .text-big {
     font-size: 300%;
 }
